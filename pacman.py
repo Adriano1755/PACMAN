@@ -66,23 +66,23 @@ class PacMan:
                 # Mettre à jour `self.rect.topleft` avec la nouvelle position à l'écran pour déplacer l'affichage de Pac-Man.
                 self.rect.topleft = (screen_x, screen_y)
 
-def set_direction(self, direction):
-    self.direction = direction
+    def set_direction(self, direction):
+        self.direction = direction
 
-def stop(self):
-    self.direction = None
+    def stop(self):
+        self.direction = None
 
-def reset(self):
-    self.x, self.y = PACMAN_START_POS
-    self.direction = None
+    def reset(self):
+        self.x, self.y = PACMAN_START_POS
+        self.direction = None
 
-def die(self):
+    def die(self):
 
-    if self.lives == 0:
-        # Game over
-        return True
-    
-    # Reduce the number of lives
-    self.lives -= 1
+        if self.lives == 0:
+            # Game over
+            return True
+        
+        # Reduce the number of lives
+        self.lives -= 1
 
-    self.reset()
+        self.reset()
